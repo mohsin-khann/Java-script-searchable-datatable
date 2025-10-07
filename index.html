@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Searchable Table</title>
+</head>
+<body>
+    <header class="header">
+        <h1>Searchable Data Table</h1>
+    </header>
+    <main class="main-content">
+        <section class="form-section">
+            <h2>Add New Entry</h2>
+            <form class="entry-form">
+                <div class="form-group">
+                    <label for="id">ID</label>
+                    <input type="text" id="id" placeholder="Enter ID">
+                </div>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Enter Name">
+                </div>
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" id="address" placeholder="Enter Address">
+                </div>
+                <div class="form-group">
+                    <label for="contact">Contact Number</label>
+                    <input type="text" id="contact" placeholder="Enter Contact Number">
+                </div>
+                <button type="button" class="btn-add" onclick="addEntry()">Add Entry</button>
+            </form>
+        </section>
+        <section class="search-section">
+            <h2>Search Table</h2>
+            <div class="search-bar">
+                <input type="text" id="searchTable" oninput="searchTable()" placeholder="Search by ID or Name">
+            </div>
+        </section>
+        <section class="table-section">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Contact Number</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <!-- Dynamic rows will be added here -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2025 Data Table. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
